@@ -1,4 +1,4 @@
-
+/* Uncomment to get started
 class TabLink {
   constructor(element) {
     // Assign this.element to the passed in DOM element
@@ -59,4 +59,8 @@ class TabItem {
 
 */
 
+/* Uncomment to get started
+
 links = document.querySelectorAll();
+
+*/

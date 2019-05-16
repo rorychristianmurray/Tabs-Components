@@ -10,7 +10,7 @@ class Dropdown {
     console.log('this.button', this.button);
     
     // assign the reference to the ".dropdown-content" class found in the dropdown element
-    this.dropdownContent = this.element.querySelector('.dropdown-content'); // Wll toggle .dropdown-hidden on and off this div
+    this.dropdownContent = this.element.querySelector('.dropdown-content'); // Will toggle .dropdown-hidden on and off this div
     console.log('this.dropdownContent', this.dropdownContent);
     
     // Add a click handler to the button reference and call the toggleContent method.

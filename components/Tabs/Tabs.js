@@ -10,7 +10,7 @@ class TabLink {
     
     
     // Using the custom data attribute get the associated Item element
-    this.itemElement = document.querySelector(`.tabs-link[data-tab="${this.data}"]`);
+    this.itemElement = document.querySelector(`.tabs-item[data-tab="${this.data}"]`);
     console.log('this.itemElement', this.itemElement)
     
     // Using the Item element, create a new instance of the TabItem class
@@ -25,6 +25,7 @@ class TabLink {
   select() {
     // Get all of the elements with the tabs-link class
     let links = document.querySelectorAll('.tabs-link');
+    console.log('links in select()', this.links)
 
     // Using a loop or the forEach method remove the 'tabs-link-selected' class from all of the links
     Array.from(links).forEach(link => link.classList.remove('tabs-link-selected'));
@@ -50,8 +51,10 @@ class TabItem {
     // Select all ".tabs-item" elements from the DOM
     const items = document.querySelectorAll('.tabs-item');
     console.log('items', items);
+
     // Remove the class "tabs-item-selected" from each element
     items.forEach(item => item.classList.remove('tabs-item-selected'))
+
     // Add a class named "tabs-item-selected" to this element
     this.element.classList.add('tabs-item-selected');
   }
@@ -68,15 +71,14 @@ class TabItem {
 */
 
 // Select all classes named ".tabs-link" and assign that value to the links variable
+//  With your selection in place, now chain a .forEach() method onto the links variable to iterate over the DOM NodeList
+// In your .forEach() method's callback function, return a new instance of TabLink and pass in each link as a parameter 
+
 
 const links = document.querySelectorAll('.tabs-link');
 console.log('links variable', links);
 
 // links is a variable that is assigned to the NodeList containing all of Tab buttons
-
-
-//  With your selection in place, now chain a .forEach() method onto the links variable to iterate over the DOM NodeList
-// In your .forEach() method's callback function, return a new instance of TabLink and pass in each link as a parameter
 
 links.forEach(function(tablink) {
   console.log('tablink', tablink)
